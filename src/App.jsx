@@ -5,6 +5,7 @@ import Quiz from "./views/Quiz";
 import Result from "./views/Result";
 import { questions_node_express } from "./data/questions_node_express";
 import { questions_php } from "./data/questions_php";
+import { questions_pdo } from "./data/questions_pdo";
 
 function shuffleArray(array) {
   // Mélange un tableau (Fisher-Yates)
@@ -39,6 +40,7 @@ export default function App() {
 
   const getQuestionsForCategory = (cat) => {
     if (cat === "php") return questions_php;
+    if (cat === "pdo") return questions_pdo;
     return questions_node_express;
   };
 

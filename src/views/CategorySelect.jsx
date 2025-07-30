@@ -15,6 +15,12 @@ export default function CategorySelect({ onSelect, onBack }) {
       label: "PHP",
       color: "from-yellow-400 to-purple-500",
       icon: "\ud83d\udcbb"
+    },
+    {
+      key: "pdo",
+      label: "PDO",
+      color: "from-green-500 to-blue-500",
+      icon: "\ud83d\udcbe"
     }
   ];
 
