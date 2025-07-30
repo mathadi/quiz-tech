@@ -6,7 +6,7 @@ export default function Result({ questions, answers, onRestart, onOtherQuiz }) {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-pink-100 px-1 sm:px-4 relative">
-      <div className="w-full max-w-md sm:max-w-2xl bg-white/90 p-3 sm:p-8 rounded-xl sm:rounded-2xl shadow-xl border border-blue-100 text-center">
+      <div className="w-5xl bg-white/90 p-3  rounded-xl  shadow-xl border border-blue-100 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 text-blue-700 drop-shadow">Résultat du Quiz</h2>
         <div className="mb-2 sm:mb-4 text-base sm:text-lg md:text-xl">Score : <span className="text-green-600 font-bold">{correct} / {total}</span></div>
         <div className="overflow-x-auto mb-4 sm:mb-8">
