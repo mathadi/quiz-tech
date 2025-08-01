@@ -18,9 +18,15 @@ export default function CategorySelect({ onSelect, onBack }) {
     },
     {
       key: "pdo",
-      label: "PDO",
+      label: "PDO & MySQL",
       color: "from-green-500 to-blue-500",
       icon: "\ud83d\udcbe"
+    },
+    {
+      key: "laravel",
+      label: "Laravel",
+      color: "from-red-500 to-yellow-500",
+      icon: "🅻"
     }
   ];
 
@@ -39,7 +45,7 @@ export default function CategorySelect({ onSelect, onBack }) {
         </div>
         <div className="bg-white p-10 rounded-2xl shadow-2xl border border-indigo-200 text-center">
           <h2 className="text-3xl font-bold mb-6 text-indigo-700 drop-shadow">
-            Choisis ta catégorie
+            Dans quoi veux-tu réviser ?
           </h2>
           <div className="flex flex-col md:flex-row justify-center gap-5 mb-8">
             {categories.map(cat => (
