@@ -5,11 +5,11 @@ export default function Quiz({ questions, onFinish, onBack }) {
   const [answers, setAnswers] = useState([]);
   const [showCorrection, setShowCorrection] = useState(false);
   const [selected, setSelected] = useState(null);
-  const [timer, setTimer] = useState(20);
+  const [timer, setTimer] = useState(40);
   const timerRef = useRef();
 
   useEffect(() => {
-    setTimer(20);
+    setTimer(40);
     setSelected(null);
     setShowCorrection(false);
     timerRef.current = setInterval(() => {
