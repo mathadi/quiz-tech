@@ -33,6 +33,18 @@ export default function CategorySelect({ onSelect, onBack }) {
       label: "React",
       color: "from-cyan-500 to-blue-500",
       icon: "\u269b"
+    },
+    {
+      key: "typescript",
+      label: "TypeScript",
+      color: "from-blue-600 to-blue-800",
+      icon: "📘"
+    },
+    {
+      key: "python",
+      label: "Python",
+      color: "from-yellow-500 to-blue-600",
+      icon: "🐍"
     }
   ];
 
@@ -53,7 +65,7 @@ export default function CategorySelect({ onSelect, onBack }) {
           <h2 className="text-3xl font-bold mb-6 text-indigo-700 drop-shadow">
             Dans quoi veux-tu réviser ?
           </h2>
-          <div className="flex flex-col md:flex-row justify-center gap-5 mb-8">
+          <div className="flex flex-col flex-wrap md:flex-row justify-center gap-5 mb-8">
             {categories.map(cat => (
               <button
                 key={cat.key}

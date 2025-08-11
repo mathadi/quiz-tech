@@ -8,6 +8,8 @@ import { questions_php } from "./data/questions_php";
 import { questions_pdo } from "./data/questions_pdo";
 import { questions_laravel } from "./data/questions_laravel";
 import { questions_react } from "./data/question_react";
+import { questions_typescript } from "./data/questions_typescript";
+import { questions_python } from "./data/questions_python";
 
 function shuffleArray(array) {
   // Mélange un tableau (Fisher-Yates)
@@ -45,6 +47,8 @@ export default function App() {
     if (cat === "pdo") return questions_pdo;
     if (cat === "laravel") return questions_laravel;
     if (cat === "react") return questions_react;
+    if (cat === "typescript") return questions_typescript;
+    if (cat === "python") return questions_python;
     return questions_node_express;
   };
 
