@@ -21,6 +21,12 @@ export default function CategorySelect({ onSelect, onBack }) {
       label: "PDO",
       color: "from-green-500 to-blue-500",
       icon: "\ud83d\udcbe"
+    },
+    {
+      key: "react",
+      label: "React",
+      color: "from-cyan-500 to-blue-500",
+      icon: "\u269b"
     }
   ];
 
@@ -30,7 +36,7 @@ export default function CategorySelect({ onSelect, onBack }) {
         <div className="mb-2 flex justify-start">
           <button
             onClick={onBack}
-            className="flex items-center gap-2 text-blue-600 hover:text-pink-500 font-semibold bg-white/80 rounded-full px-4 py-2 shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="flex items-center gap-2 cursor-pointer text-blue-600 hover:text-pink-500 font-semibold bg-white/80 rounded-full px-4 py-2 shadow transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
             aria-label="Retour à l'accueil"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
@@ -46,7 +52,7 @@ export default function CategorySelect({ onSelect, onBack }) {
               <button
                 key={cat.key}
                 onClick={() => { setSelected(cat.key); onSelect(cat.key); }}
-                className={`flex flex-col items-center px-8 py-6 rounded-2xl shadow-lg font-bold text-lg text-white bg-gradient-to-r ${cat.color} hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-pink-200 ${selected === cat.key ? 'ring-4 ring-pink-400' : ''}`}
+                className={`flex flex-col items-center cursor-pointer px-8 py-6 rounded-2xl shadow-lg font-bold text-lg text-white bg-gradient-to-r ${cat.color} hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-pink-200 ${selected === cat.key ? 'ring-4 ring-pink-400' : ''}`}
               >
                 <span className="text-4xl mb-2">{cat.icon}</span>
                 {cat.label}

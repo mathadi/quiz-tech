@@ -44,13 +44,13 @@ export default function Result({ questions, answers, onRestart, onOtherQuiz }) {
         </div>
         <div className="flex flex-col gap-2 sm:gap-4 items-center w-full">
           <button
-            className="w-full bg-gradient-to-r from-blue-500 to-pink-400 text-white py-3 rounded-lg font-bold text-lg shadow hover:scale-105 hover:from-blue-600 hover:to-pink-500 transition-transform duration-200 mb-0"
+            className="w-full cursor-pointer bg-gradient-to-r from-blue-500 to-pink-400 text-white py-3 rounded-lg font-bold text-lg shadow hover:from-blue-600 hover:to-pink-500 transition-transform duration-200 mb-0"
             onClick={onRestart}
           >
             Recommencer
           </button>
           <button
-            className="w-full bg-gradient-to-r from-gray-400 to-blue-300 text-white py-3 rounded-lg font-bold text-lg shadow hover:scale-105 hover:from-gray-500 hover:to-blue-400 transition-transform duration-200"
+            className="w-full cursor-pointer bg-gradient-to-r from-gray-400 to-blue-300 text-white py-3 rounded-lg font-bold text-lg shadow hover:from-gray-500 hover:to-blue-400 transition-transform duration-200"
             onClick={onOtherQuiz}
           >
             Passer un autre quiz

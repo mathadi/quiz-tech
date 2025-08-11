@@ -36,7 +36,7 @@ export default function Home({ onGo }) {
         </ul>
         <button
           onClick={onGo}
-          className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-base sm:text-lg font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+          className="w-full cursor-pointer sm:w-auto bg-gradient-to-r from-indigo-500 to-pink-500 text-white text-base sm:text-lg font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
         >
           Aller go !
         </button>
