@@ -6,6 +6,7 @@ import Result from "./views/Result";
 import { questions_node_express } from "./data/questions_node_express";
 import { questions_php } from "./data/questions_php";
 import { questions_pdo } from "./data/questions_pdo";
+import { questions_laravel } from "./data/questions_laravel";
 import { questions_react } from "./data/question_react";
 
 function shuffleArray(array) {
@@ -21,14 +22,14 @@ function shuffleArray(array) {
 function shuffleQuestions(questions) {
   // Mélange l'ordre des questions, puis mélange les options de chaque question
   const shuffledQuestions = shuffleArray(questions);
-  return shuffledQuestions.map(q => {
+  return shuffledQuestions.map((q) => {
     const options = shuffleArray(q.options);
     const answerText = q.options[q.answer];
     const newAnswer = options.indexOf(answerText);
     return {
       ...q,
       options,
-      answer: newAnswer
+      answer: newAnswer,
     };
   });
 }
@@ -42,6 +43,7 @@ export default function App() {
   const getQuestionsForCategory = (cat) => {
     if (cat === "php") return questions_php;
     if (cat === "pdo") return questions_pdo;
+    if (cat === "laravel") return questions_laravel;
     if (cat === "react") return questions_react;
     return questions_node_express;
   };
@@ -98,7 +100,12 @@ export default function App() {
   return (
     <>
       {step === "home" && <Home onGo={handleGo} />}
-      {step === "category" && <CategorySelect onSelect={handleSelectCategory} onBack={handleBackToHome} />}
+      {step === "category" && (
+        <CategorySelect
+          onSelect={handleSelectCategory}
+          onBack={handleBackToHome}
+        />
+      )}
       {step === "quiz" && (
         <Quiz
           questions={shuffledQuestions}
