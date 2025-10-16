@@ -31,7 +31,7 @@ export default function Home({ onGo }) {
           </li>
           <li className="w-full max-w-xs sm:max-w-md bg-white rounded-xl shadow-md flex flex-col items-center py-3 sm:py-5 px-3 sm:px-6 transition-all duration-200 hover:shadow-xl hover:bg-red-50 group">
             <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-100 mb-1 sm:mb-2 group-hover:bg-red-200 transition-all text-xl sm:text-2xl text-red-500 shadow">⏳</span>
-            <span className="font-semibold text-red-700 text-base sm:text-lg text-center">Mais attention, pour chaque question, tu as 20 secondes pour répondre !</span>
+            <span className="font-semibold text-red-700 text-base sm:text-lg text-center">Mais attention, pour chaque question, tu as 40 secondes pour répondre !</span>
           </li>
         </ul>
         <button
